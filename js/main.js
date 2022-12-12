@@ -1,4 +1,4 @@
-let nombre="valeria duque";
+/* let nombre="valeria duque";
 nombre=nombre.toLocaleUpperCase();
 nombre.charAt(0);
 let aux=0,aux2=0,aux3="",i=0;
@@ -17,4 +17,25 @@ function iguales() {
         console.log("no se repiten letras");
     }else
     console.log("la  letra que mas se repite es:"+ aux3 + ", se repitio: " + i +" veces");
+} */
+
+
+let nombre="rogelio"
+let aux=0,aux2=0,aux3="",i=0;
+nombre.charAt(0);
+function iguales() {
+
+
+    
+        for ( aux = nombre.length; aux >=0; aux--) {
+            
+            aux2=nombre.charAt(aux);
+            console.log(aux2)
+            
+        }        
+    
+
+
+
+
 }
