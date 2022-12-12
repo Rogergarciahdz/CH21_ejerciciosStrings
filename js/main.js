@@ -41,7 +41,7 @@ function iguales() {
 } */
 
 
-let nombre="roge"
+/* let nombre="anita lava la tina"
 let aux=0,aux2=0,aux3=0,aux4=0,i=0;
 nombre.charAt(0);
 function iguales() {
@@ -78,4 +78,40 @@ function iguales() {
        
 
 
+} */
+
+
+let btnEnviar=document.getElementById("btnEnviar");
+
+btnEnviar.addEventListener("click", function(event) {
+event.preventDefault();
+let emailRegex= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+
+let exampleFormControlInput1 = document.getElementById("exampleFormControlInput1");
+let exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1");
+let alertError = document.getElementById("alertError")
+
+exampleFormControlTextarea1.value=exampleFormControlTextarea1.value.trim();
+alertError.style.display="none";
+console.log("[" + exampleFormControlInput1.value.replaceAll("  ","")+ "]" );
+
+
+
+
+
+
+if (exampleFormControlTextarea1.value.trim().length<20) {
+    alertError.innerHTML = "el mensaje debe tener 20 caracteres";
+    alertError.style.display="block";
+    exampleFormControlTextarea1.focus();
+    exampleFormControlTextarea1.selected();
 }
+
+
+if (exampleFormControlInput1.value.match(emailRegex)==null) {
+    alertError.style.display="block";
+    alertError.innerHTML += "<br>El correo electónivo no es válido.";
+}
+
+});
